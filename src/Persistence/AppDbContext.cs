@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistence;
@@ -6,6 +7,6 @@ namespace Persistence;
 public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
 
-    public DbSet<Activity> Activities { get; set; }
+    public DbSet<Event> Events { get; set; }
 
 }
